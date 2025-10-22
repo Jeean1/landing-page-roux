@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ROUX — GPS y Pedidos (Empresa & Familia)</title>
+    <meta
+      name="description"
+      content="ROUX — sistema de ubicación GPS y creación de pedidos. Ideal para empresas y familias. $20.000 GPS / $30.000 Pedidos"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --gold: #bf9b30;
+        --gold-2: #d4af37;
+        --bg: #0f0f0f;
+        --muted: #fff;
+        --card-bg: #111111;
+      }
+      body {
+        background: var(--bg);
+        color: #f5f5f5;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .navbar {
+        background: #000;
+        border-bottom: 1px solid var(--gold);
+      }
+      .brand {
+        color: var(--gold);
+        font-weight: 700;
+        letter-spacing: 0.6px;
+      }
+      header.hero {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+          ),
+          url("https://www.cali.gov.co/turismo/publicaciones/131929/cali-turistica/info/caligovco_se/media/galeria137363.jpg")
+            center/cover no-repeat;
+        padding: 80px 0;
+        text-align: center;
+      }
+      header.hero h1 {
+        color: var(--gold);
+        font-size: clamp(1.6rem, 3.6vw, 3rem);
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+      }
+      header.hero p {
+        color: var(--muted);
+        margin-bottom: 1rem;
+      }
+      .btn-gold {
+        background: var(--gold);
+        color: #000;
+        border: none;
+        font-weight: 700;
+        padding: 0.65rem 1.1rem;
+        border-radius: 0.5rem;
+      }
+      .btn-gold:hover {
+        background: var(--gold-2);
+        color: #000;
+      }
+      .section-card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(0, 0, 0, 0.06)
+        );
+        border: 1px solid rgba(191, 155, 48, 0.08);
+        border-radius: 12px;
+        padding: 28px;
+        color: #eaeaea;
+      }
+      h2.section-title {
+        color: var(--gold);
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .price {
+        font-size: 1.6rem;
+        color: var(--gold);
+        font-weight: 800;
+        margin: 0.65rem 0;
+      }
+      .img-preview {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid #222;
+        box-shadow: 0 6px 20px rgba(191, 155, 48, 0.06);
+      }
+      .benefit {
+        background: var(--card-bg);
+        border: 1px solid #222;
+        border-radius: 10px;
+        padding: 18px;
+        text-align: left;
+        height: 100%;
+      }
+      .benefit .icon {
+        font-size: 28px;
+        color: var(--gold);
+        margin-bottom: 8px;
+      }
+      .dual-card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.01),
+          rgba(255, 255, 255, 0.02)
+        );
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .plan-small {
+        background: #0b0b0b;
+        border: 1px solid rgba(191, 155, 48, 0.06);
+        border-radius: 8px;
+        padding: 14px;
+        color: var(--muted);
+      }
+      footer {
+        border-top: 1px solid rgba(191, 155, 48, 0.06);
+        padding: 28px 0;
+        color: var(--muted);
+        margin-top: 40px;
+        text-align: center;
+      }
+      a.cta-link {
+        color: var(--gold);
+        text-decoration: underline;
+        font-weight: 700;
+      }
+      @media (min-width: 992px) {
+        .hero-grid {
+          display: flex;
+          gap: 28px;
+          align-items: center;
+          justify-content: center;
+        }
+        .hero-grid .left {
+          max-width: 560px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <nav class="navbar">
+      <div
+        class="container d-flex justify-content-between align-items-center py-2"
+      >
+        <div class="brand">ROUX</div>
+        <div>
+          <a href="#planes" class="btn btn-outline-light me-2">Planes</a>
+          <a href="#contact" class="btn btn-gold">Contactar</a>
+        </div>
+      </div>
+    </nav> -->
+
+    <header class="hero">
+      <div class="container hero-grid">
+        <div class="left">
+          <h1>Ubicación en tiempo real y pedidos — para empresas y familias</h1>
+          <p class="muted" style="font-weight: bold;">
+            Una sola plataforma: rastrea rutas, gestiona pedidos y conecta a las
+            personas que más importan.
+          </p>
+          <div class="mt-3">
+            <a href="#dual" class="btn btn-gold me-2">Elegir uso</a>
+            <a href="#video" class="btn btn-outline-light">Ver demo</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container my-5">
+      <!-- DUAL CHOICE -->
+      <section id="dual" class="mb-5">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-6">
+            <div class="dual-card h-100">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <div>
+                  <h2 class="section-title">Para Empresas</h2>
+                  <p class="muted mb-2">
+                    Control operativo, reportes y gestión de fuerza de ventas.
+                    Integraciones y facturación.
+                  </p>
+                  <ul class="muted mb-3" style="padding-left: 1.05rem">
+                    <li>Ubicación en ruta por vendedor</li>
+                    <li>Control de pedidos y stock (básico)</li>
+                    <li>Reportes de actividad y exportación</li>
+                  </ul>
+                  <a
+                    href="mailto:sales@roux.co?subject=Interés%20ROUX%20Empresa"
+                    class="btn btn-gold"
+                    >Gestionar mi equipo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="dual-card h-100">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <div>
+                  <h2 class="section-title">Para Familias</h2>
+                  <p class="muted mb-2">
+                    Comparte ubicación con confianza: para padres, parejas o
+                    grupos que quieran estar tranquilos.
+                  </p>
+                  <ul class="muted mb-3" style="padding-left: 1.05rem">
+                    <li>Compartir ubicación entre miembros</li>
+                    <li>Alertas simples (check-in)</li>
+                    <li>Privacidad por diseño</li>
+                  </ul>
+                  <!-- Replace the wa.me number with your real number -->
+                  <a
+                    href="https://wa.me/573001234567"
+                    target="_blank"
+                    class="btn btn-gold"
+                    >Cuidar a mi familia</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </section>
+
+      <!-- BENEFITS -->
+      <section class="mb-5">
+        <h2 class="section-title">Beneficios que importan</h2>
+        <p class="muted mb-4">
+          Diseñado para operaciones reales y para la gente real.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="benefit">
+              <div class="icon">🚗</div>
+              <div class="benefit-title">Ubicación precisa</div>
+              <div class="benefit-text">
+                Rutas y puntos de interés con histórico. Perfecto para optimizar
+                recorridos.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="benefit">
+              <div class="icon">⚙️</div>
+              <div class="benefit-title">Operación simple</div>
+              <div class="benefit-text">
+                Interfaz rápida para registrar pedidos y sincronizar al backend
+                cuando haya conexión.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="benefit">
+              <div class="icon">💛</div>
+              <div class="benefit-title">Cercanía humana</div>
+              <div class="benefit-text">
+                Funcionalidades pensadas para proteger y conectar a familiares y
+                equipos pequeños.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLANS & MEDIA -->
+      <section id="video" class="mb-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="section-card">
+              <h2 class="section-title">Planes</h2>
+              <p class="muted">
+                Precios claros. Sin letra chica. Pagos por usuario y mes.
+              </p>
+              <div class="row g-3 mt-3">
+                <div class="col-6">
+                  <div class="plan-small text-center">
+                    <div class="muted">Sistema GPS</div>
+                    <div class="price">$20.000</div>
+                    <div class="muted small">/ usuario</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="plan-small text-center">
+                    <div class="muted">Sistema de Pedidos</div>
+                    <div class="price">$30.000</div>
+                    <div class="muted small">/ usuario</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 d-flex gap-2">
+                <a href="mailto:sales@roux.co" class="btn btn-outline-light"
+                  >Hablar con ventas</a
+                >
+                <a
+                  href="https://wa.me/573001234567"
+                  target="_blank"
+                  class="btn btn-gold"
+                  >Activar cuenta</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="section-card text-center">
+              <h2 class="section-title">Demo rápido</h2>
+              <p class="muted mb-3">
+                Un video breve para entender el flujo en 90 segundos.
+              </p>
+              <div class="ratio ratio-16x9">
+                <!-- placeholder video; replace with your own -->
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Demo ROUX"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="muted small mt-2">
+                Reemplaza el video por tu demo real cuando lo tengas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="mb-5 text-center">
+        <div class="section-card">
+          <h2 class="section-title">Listo para empezar</h2>
+          <p class="muted">Activa una prueba o solicita demo personalizada.</p>
+          <div class="mt-3">
+            <a href="mailto:sales@roux.co" class="btn btn-outline-light me-2"
+              >Solicitar demo</a
+            >
+            <a
+              href="https://wa.me/573001234567"
+              class="btn btn-gold"
+              target="_blank"
+              >Contactar por WhatsApp</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div>© 2025 ROUX · Todos los derechos reservados</div>
+        <div class="muted small mt-1">
+          Diseñado para empresas y familias que valoran control y simplicidad.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
